@@ -8,15 +8,6 @@ use Barberry\ContentType;
 
 class Installer implements Plugin\InterfaceInstaller
 {
-    /**
-     * @var string
-     */
-    private $tempDirectory;
-
-    public function __construct($tempDirectory)
-    {
-        $this->tempDirectory = $tempDirectory;
-    }
 
     public function install(Direction\ComposerInterface $directionComposer, Monitor\ComposerInterface $monitorComposer,
         $pluginParams = array())
