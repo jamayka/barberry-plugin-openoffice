@@ -1,5 +1,5 @@
 <?php
-namespace Barberry\Plugin\OpenOffice;
+namespace Barberry\Plugin\Openoffice;
 
 use Barberry\Plugin;
 use Barberry\Direction;
@@ -26,12 +26,12 @@ class Installer implements Plugin\InterfaceInstaller
                 $pair[0],
                 eval('return ' . $pair[1] . ';'),
                 <<<PHP
-new Plugin\\OpenOffice\\Converter ($pair[1], '{$this->tempDirectory}');
+new Plugin\\Openoffice\\Converter ($pair[1], '{$this->tempDirectory}');
 PHP
             );
         }
 
-        $monitorComposer->writeClassDeclaration('OpenOffice', "parent::__construct('{$this->tempDirectory}')");
+        $monitorComposer->writeClassDeclaration('Openoffice', "parent::__construct('{$this->tempDirectory}')");
     }
 
 //--------------------------------------------------------------------------------------------------

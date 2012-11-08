@@ -1,5 +1,5 @@
 <?php
-namespace Barberry\Plugin\OpenOffice;
+namespace Barberry\Plugin\Openoffice;
 
 class OpenOfficeException extends \Exception
 {

@@ -13,6 +13,6 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Barberry\\Plugin\\OpenOffice": "src/"}
+        "psr-0": {"Barberry\\Plugin\\Openoffice": "src/"}
     }
 }

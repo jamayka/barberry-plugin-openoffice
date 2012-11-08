@@ -1,5 +1,5 @@
 <?php
-namespace Barberry\Plugin\OpenOffice;
+namespace Barberry\Plugin\Openoffice;
 
 use Mockery as m;
 
@@ -42,7 +42,7 @@ class MonitoringTest extends \PHPUnit_Framework_TestCase
 
     public function testReturnErrorIfNoUnixCommandFound()
     {
-        $monitor = $this->getMock('Barberry\Plugin\OpenOffice\Monitor', array('dependencies'));
+        $monitor = $this->getMock('Barberry\Plugin\Openoffice\Monitor', array('dependencies'));
         $monitor->configure($this->testDirWritable);
         $monitor->expects($this->any())
             ->method('dependencies')

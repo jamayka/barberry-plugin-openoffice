@@ -1,5 +1,5 @@
 <?php
-namespace Barberry\Plugin\OpenOffice;
+namespace Barberry\Plugin\Openoffice;
 use Barberry\Direction;
 use Barberry\Direction\Composer;
 use Barberry\Monitor;
