@@ -25,13 +25,11 @@ class Installer implements Plugin\InterfaceInstaller
             $directionComposer->writeClassDeclaration(
                 $pair[0],
                 eval('return ' . $pair[1] . ';'),
-                <<<PHP
-new Plugin\\Openoffice\\Converter ($pair[1], '{$this->tempDirectory}');
-PHP
+                'new Plugin\\Openoffice\\Converter'
             );
         }
 
-        $monitorComposer->writeClassDeclaration('Openoffice', "parent::__construct('{$this->tempDirectory}')");
+        $monitorComposer->writeClassDeclaration('Openoffice');
     }
 
 //--------------------------------------------------------------------------------------------------
