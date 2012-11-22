@@ -32,7 +32,7 @@ class Converter implements Plugin\InterfaceConverter
     {
         $source = tempnam($this->tempPath, "ooconverter_");
         chmod($source, 0664);
-        $destination = $source . '.' . $this->targetContentType->standartExtention();
+        $destination = $source . '.' . $this->targetContentType->standardExtension();
         file_put_contents($source, $bin);
         $out = exec(
             'python ' . __DIR__ . '/../../../../externals/pyodconverter/DocumentConverter.py ' . "$source $destination"
